@@ -1,3 +1,9 @@
 spring-test/leecode/target/test-classes/
 spring-test/spring-boot-test/target/
 spring-test/spring-jpa-test/target/
+spring-test/.settings/
+*.project
+*.classpath
+spring-test/spring-jpa-test/.settings/
+spring-test/spring-boot-test/.settings/
+spring-test/leecode/.settings/
