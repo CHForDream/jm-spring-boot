@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class SpringBootLeecodeApplication 
-{
-    public static void main( String[] args )
-    {
-        SpringApplication.run(SpringBootLeecodeApplication.class);
-    }
+public class SpringBootLeecodeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootLeecodeApplication.class);
+	}
+
 }

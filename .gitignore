@@ -7,3 +7,5 @@ spring-test/.settings/
 spring-test/spring-jpa-test/.settings/
 spring-test/spring-boot-test/.settings/
 spring-test/leecode/.settings/
+spring-test/shell-test/.settings/
+spring-test/shell-test/target/

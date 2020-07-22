@@ -9,11 +9,12 @@
 		<artifactId>spring-test</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>leecode</artifactId>
-	<name>leecode</name>
+	<artifactId>shell-test</artifactId>
+	<name>shell-test</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 解决首行报错 Unknow 错误 -->
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 	<dependencies>
