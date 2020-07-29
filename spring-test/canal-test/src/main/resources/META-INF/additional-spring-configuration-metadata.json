@@ -1,0 +1,30 @@
+{
+	"properties": [
+		{
+			"name": "canal.destination",
+			"type": "java.lang.String",
+			"description": "canal destination"
+		},
+		{
+			"name": "canal.serverip",
+			"type": "java.lang.String",
+			"description": "canal serverIp"
+		},
+		{
+			"name": "canal.username",
+			"type": "java.lang.String",
+			"description": "canal username"
+		},
+		{
+			"name": "canal.password",
+			"type": "java.lang.String",
+			"description": "canal password"
+		},
+		{
+			"name": "canal.port",
+			"type": "java.lang.Integer",
+			"description": "canal port",
+			"defautValue": 11111
+		}
+	]
+}
