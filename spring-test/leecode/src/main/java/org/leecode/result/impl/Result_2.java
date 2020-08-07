@@ -1,5 +1,6 @@
 package org.leecode.result.impl;
 
+import org.leecode.Utils.ListNode;
 import org.leecode.result.IResult;
 import org.springframework.stereotype.Service;
 
@@ -78,31 +79,5 @@ public class Result_2 implements IResult {
 			re1.next = tmp;
 		}
 		return re;
-	}
-
-	public class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-
-		public int getVal() {
-			return val;
-		}
-
-		public void setVal(int val) {
-			this.val = val;
-		}
-
-		public ListNode getNext() {
-			return next;
-		}
-
-		public void setNext(ListNode next) {
-			this.next = next;
-		}
-
 	}
 }

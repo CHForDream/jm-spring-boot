@@ -3,6 +3,7 @@ package org.leecode.result.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.leecode.Utils.ListNode;
 import org.leecode.result.IResult;
 import org.springframework.stereotype.Service;
 
@@ -119,31 +120,5 @@ public class Result_19 implements IResult {
 		}
 		end.next = end.next.next;
 		return pre.next;
-	}
-
-	public class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-
-		public int getVal() {
-			return val;
-		}
-
-		public void setVal(int val) {
-			this.val = val;
-		}
-
-		public ListNode getNext() {
-			return next;
-		}
-
-		public void setNext(ListNode next) {
-			this.next = next;
-		}
-
 	}
 }
