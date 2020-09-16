@@ -7,18 +7,23 @@ import org.springframework.stereotype.Service;
 import com.alibaba.fastjson.JSON;
 
 @Service
-public class Result_21 implements IResult {
+public class Result_23 implements IResult {
 
 	/**
+	 * 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
 	 * 
-	 * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
-	 * 示例：
+	 * 示例:
 	 * 
-	 * 输入：1->2->4, 1->3->4
-	 * 输出：1->1->2->3->4->4
+	 * 输入:
+	 * [
+	 *   1->4->5,
+	 *   1->3->4,
+	 *   2->6
+	 * ]
+	 * 输出: 1->1->2->3->4->4->5->6
 	 */
 	public static void main(String[] args) {
-		Result_21 e = new Result_21();
+		Result_23 e = new Result_23();
 		e.process();
 		e.gerneral();
 //		System.out.println(e.process());
@@ -84,6 +89,14 @@ public class Result_21 implements IResult {
 
 		System.out.println(res + " time: " + (System.currentTimeMillis() - cur));
 		return JSON.toJSONString(re);
+	}
+
+	public ListNode mergeKLists(ListNode[] lists) {
+		ListNode node = null;
+		for (int i = 0; i < lists.length; i++) {
+			node = mergeTwoListsGeneral(node, lists[i]);
+		}
+		return node;
 	}
 
 	private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
