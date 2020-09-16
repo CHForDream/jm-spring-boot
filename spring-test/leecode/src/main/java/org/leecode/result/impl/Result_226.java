@@ -59,7 +59,6 @@ public class Result_226 implements IResult {
 	}
 
 	public TreeNode invertTree(TreeNode root) {
-
 		if (root == null) {
 			return root;
 		}
