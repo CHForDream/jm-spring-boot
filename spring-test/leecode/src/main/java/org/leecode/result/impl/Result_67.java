@@ -1,8 +1,6 @@
 package org.leecode.result.impl;
 
 import org.leecode.result.IResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,7 +23,6 @@ public class Result_67 implements IResult {
 	 * 字符串如果不是 "0" ，就都不含前导零。
 	 */
 
-	private static final Logger log = LoggerFactory.getLogger(Result_67.class);
 	private String a = "11";
 	private String b = "111";
 

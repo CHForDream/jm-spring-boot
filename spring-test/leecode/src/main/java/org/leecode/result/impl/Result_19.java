@@ -25,7 +25,6 @@ public class Result_19 implements IResult {
 	 * 你能尝试使用一趟扫描实现吗？
 	 */
 	int[] nums = { 1, 0, -1, 0, -2, 2 };
-	private int target = 0;
 
 	public static void main(String[] args) {
 		Result_19 e = new Result_19();

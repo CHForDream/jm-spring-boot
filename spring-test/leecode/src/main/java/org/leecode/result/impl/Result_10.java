@@ -61,8 +61,6 @@ public class Result_10 implements IResult {
 
 	@Override
 	public String gerneral() {
-		int[] nums = { 1, 2, 3, 4 };
-		int target = 3;
 		return null;
 	}
 

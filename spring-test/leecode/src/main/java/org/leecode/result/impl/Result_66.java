@@ -1,8 +1,6 @@
 package org.leecode.result.impl;
 
 import org.leecode.result.IResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
@@ -25,7 +23,6 @@ public class Result_66 implements IResult {
 	 * 解释: 输入数组表示数字 4321。
 	 */
 
-	private static final Logger log = LoggerFactory.getLogger(Result_66.class);
 	private int[] digit = new int[] { 1, 2, 3 };
 
 	public static void main(String[] args) {
@@ -35,7 +32,6 @@ public class Result_66 implements IResult {
 
 	@Override
 	public String process() {
-		String s = "PAYPALISHIRING";
 		return JSON.toJSONString(plusOne(digit));
 	}
 
