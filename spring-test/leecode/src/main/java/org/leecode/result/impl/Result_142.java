@@ -44,8 +44,6 @@ public class Result_142 implements IResult {
 
 	@Override
 	public String gerneral() {
-		int[] nums = { 1, 2, 3, 4 };
-		int target = 3;
 		return JSON.toJSONString(detectCycleGerneral(new ListNode()));
 	}
 

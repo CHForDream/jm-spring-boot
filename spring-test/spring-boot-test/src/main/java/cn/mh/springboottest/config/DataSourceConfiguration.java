@@ -7,13 +7,10 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.shardingsphere.api.config.sharding.ShardingRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.TableRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.strategy.InlineShardingStrategyConfiguration;
 import org.apache.shardingsphere.shardingjdbc.api.ShardingDataSourceFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 //@Configuration
@@ -37,7 +34,7 @@ public class DataSourceConfiguration {
 		// 配置真实数据源
 		Map<String, DataSource> dataSourceMap = new HashMap<>();
 		DriverManagerDataSource dataSource1 = new DriverManagerDataSource();
-		
+
 		// 配置第一个数据源
 //		BasicDataSource dataSource1 = new BasicDataSource();
 		dataSource1.setDriverClassName("com.mysql.jdbc.Driver");
@@ -67,7 +64,6 @@ public class DataSourceConfiguration {
 		// 配置分片规则
 		ShardingRuleConfiguration shardingRuleConfig = new ShardingRuleConfiguration();
 		shardingRuleConfig.getTableRuleConfigs().add(orderTableRuleConfig);
-
 
 		// 获取数据源对象
 		DataSource dataSource = ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig,
