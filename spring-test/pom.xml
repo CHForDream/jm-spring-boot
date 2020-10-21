@@ -13,6 +13,7 @@
 		<module>leecode</module>
 		<module>shell-test</module>
 		<module>canal-test</module>
+		<module>dubbo-test</module>
 	</modules>
 
 	<parent>
@@ -26,6 +27,7 @@
 		<java.version>1.8</java.version>
 		<sharding-sphere.version>4.0.1</sharding-sphere.version>
 		<druid.version>1.1.22</druid.version>
+		<dubbo.version>2.7.8</dubbo.version>
 		<fastjson.version>1.2.72</fastjson.version>
 		<canal.version>1.1.2</canal.version>
 		<mysql-connect.version>5.1.6</mysql-connect.version>
@@ -60,6 +62,14 @@
 				<artifactId>druid</artifactId>
 				<version>${druid.version}</version>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+			<dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
