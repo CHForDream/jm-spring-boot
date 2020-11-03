@@ -3,29 +3,33 @@ package org.leecode.result.impl;
 import org.leecode.result.IResult;
 import org.springframework.stereotype.Service;
 
-import com.alibaba.fastjson.JSON;
-
 @Service
 public class Result_4 implements IResult {
 	/**
-	 * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
-	 * 请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
-	 * 你可以假设 nums1 和 nums2 不会同时为空。
+	 * 463. 岛屿的周长
 	 * 
-	 * 示例 1:
-	 * nums1 = [1, 3]
-	 * nums2 = [2]
-	 * 则中位数是 2.0
-	 * 示例 2:
-	 * nums1 = [1, 2]
-	 * nums2 = [3, 4]
-	 * 则中位数是 (2 + 3)/2 = 2.5
+	 * 给定一个包含 0 和 1 的二维网格地图，其中 1 表示陆地 0 表示水域。
+	 * 网格中的格子水平和垂直方向相连（对角线方向不相连）。整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。
+	 * 岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。格子是边长为 1 的正方形。网格为长方形，且宽度和高度均不超过 100 。计算这个岛屿的周长。
+	 * 
+	 * 示例 :
+	 * 输入:
+	 * [[0,1,0,0],
+	 * [1,1,1,0],
+	 * [0,1,0,0],
+	 * [1,1,0,0]]
+	 * 输出: 16
+	 * 解释: 它的周长是下面图片中的 16 个黄色的边：
 	 */
+
+	private int[][] nums = { { 1 }, { 3 } };
+
+	private static int[] dx = { 0, 1, 0, -1 };
+	private static int[] dy = { 1, 0, -1, 0 };
+
 	@Override
 	public String process() {
-		int[] nums1 = { 1, 3 };
-		int[] nums2 = { 2, 4 };
-		return JSON.toJSONString(findMedianSortedArrays(nums1, nums2));
+		return String.valueOf(islandPerimeter(nums));
 	}
 
 	@Override
@@ -34,49 +38,22 @@ public class Result_4 implements IResult {
 		return null;
 	}
 
-	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-		int nSize1 = nums1.length;
-		int nSize2 = nums2.length;
-
-		boolean flag = (nSize1 + nSize2) % 2 == 1;
-
-		int pos0 = flag ? (nSize1 + nSize2) / 2 + 1 : (nSize1 + nSize2) / 2;
-		int pos1 = (nSize1 + nSize2) / 2 + 1;
-
-		int n1 = 0;
-
-		int n1Start = 0;
-		int n2Start = 0;
-		int count = 0;
-		while (true) {
-			int tmp = 0;
-			if (n1Start == nSize1) {
-				tmp = nums2[n2Start];
-				n2Start++;
-			} else if (n2Start == nSize2) {
-				tmp = nums1[n1Start];
-				n1Start++;
-			} else if (nums1[n1Start] <= nums2[n2Start]) {
-				tmp = nums1[n1Start];
-				n1Start++;
-			} else {
-				tmp = nums2[n2Start];
-				n2Start++;
-			}
-			count++;
-
-			if (flag) {
-				if (count == pos0) {
-					return tmp;
+	public int islandPerimeter(int[][] grid) {
+		int ans = 0;
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid[0].length; j++) {
+				if (grid[i][j] == 0) {
+					continue;
 				}
-			} else {
-				if (count == pos0) {
-					n1 = tmp;
-				}
-				if (count == pos1) {
-					return (n1 + tmp) / 2.0;
+				for (int k = 0; k < 4; k++) {
+					int tx = i + dx[k];
+					int ty = j + dy[k];
+					if (tx < 0 || ty < 0 || tx >= grid.length || ty >= grid[0].length || grid[tx][ty] == 0) {
+						ans++;
+					}
 				}
 			}
 		}
+		return ans;
 	}
 }
