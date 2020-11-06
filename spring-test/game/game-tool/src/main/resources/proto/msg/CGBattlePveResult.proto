@@ -1,0 +1,31 @@
+syntax = "proto2";
+package buffer;
+
+//PVE(单机结算)
+
+message ChessProto {
+	optional int32 chessId	= 1;// 棋子Id
+	optional int32 chessNum	= 2;// 棋子数量
+}
+
+message ComboProto {
+	optional int32 comboId	= 1;// 连击种类id 8:（1-2连击）9:（3-4连击） 18（5-6连击）19 （6连击以上）
+	optional int32 comboNum	= 2;// 连击数量
+}
+
+message CGBattlePveResultProto {
+	optional int32	msgType			= 1[default = 25001]; //协议号
+	optional int32	battleType		= 2; // 关卡类型  0 pve 1 副本
+	optional int32	cityId			= 3; // 副本所在的城市id
+	optional int32	pveId			= 4; // pve关卡Id
+	optional int32	dupId			= 5; // 副本id
+	optional int32	result			= 6; // 战斗结果. 0失败; 1胜利
+	optional int32	leftStep		= 7; // 剩余步数
+	optional int32	costStep		= 8; // 使用步数
+	repeated ChessProto chessInfo	= 10; // 搜集的棋子信息
+	repeated ComboProto comboInfo	= 11; // 牌局内发生的连击信息
+	repeated ChessProto composeInfo	= 12; // 合成的棋子信息
+	repeated ChessProto scoreInfo	= 13; // 分数类型信息 对应scoreconfig表里的id
+	optional int32	skillNum		= 14; // 使用技能数量
+	repeated ChessProto leftTargets	= 15; // 剩余目标数量
+}

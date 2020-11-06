@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+//PVE战前道具
+message CGBattlePveItemListProto {
+	optional int32 msgType = 1[default = 25002];// 协议号
+	optional int32 pveId = 2;
+	optional int32 battleType = 3; // 战斗类型。0PVE；1副本；2精英副本
+}

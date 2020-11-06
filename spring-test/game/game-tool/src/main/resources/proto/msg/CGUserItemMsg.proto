@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+message CGUserItemProto {
+	optional int32 msgType=1 [default = 2102];
+	optional int32 itemType = 2;//道具类型
+	optional int32 itemId= 3;//道具id
+	optional int32 itemNum = 4;//道具数量
+}

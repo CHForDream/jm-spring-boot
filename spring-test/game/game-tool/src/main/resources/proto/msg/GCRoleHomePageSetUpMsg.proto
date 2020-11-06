@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+message GCRoleHomePageSetUpProto{
+	optional int32 msgType = 1[default = 24023];//协议号
+	optional int32 status = 2;//协议状态   10000-成功; 10002-参数错误; 10004-资源不足; 10021-名称已存在;
+	optional int32 optType = 3;//操作类型   1:改名   2:改头像  3:签名   4:好友 5:英雄  6:宠物	
+}

@@ -1,0 +1,16 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message DayTaskProto {
+    optional int32 taskId = 1;//任务ID
+    optional string process = 2;//进度
+    optional int32 status = 3;//0未完成1可领取2已领取
+}
+
+message GCGetDayTaskListProto {
+  optional int32 msgType = 1[default = 2210];//协议号
+  optional int32 status = 2;//状态码
+  optional int32 active = 3;//活跃度
+  repeated DayTaskProto tasks = 4;//任务列表
+  optional string rewards = 5;//已经领取的活跃度奖励1,2,3,4
+}

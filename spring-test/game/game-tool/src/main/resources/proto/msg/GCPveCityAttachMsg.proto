@@ -1,0 +1,25 @@
+syntax = "proto2";
+package buffer;
+
+message ScenicSpots {
+	optional int32 pveId			= 1; // 当前景点/关卡id
+	optional int32 decId			= 2; // 当前装饰id
+}
+ 
+message CityInfo {
+	optional int32 cityId			= 1; // 当前所选择的城市id
+	repeated int32 ownDecIds		= 2; // 所选城市中已拥有的建筑id
+	repeated ScenicSpots scenicSpot	= 3; // 景点装饰信息
+}
+
+// 贴上建筑
+message GCPveCityAttachProto {
+  	optional int32 msgType			= 1[default = 7011];//协议号
+  	optional int32 pveId			= 2; // 当前第几关
+	optional int32 pveStatus		= 3; // 当前关卡状态 1解锁 2完成
+	optional int32 cityId			= 4; // 当前所在城市
+	optional int32 decId			= 5; // 当前贴上的建筑id
+	optional CityInfo cityInfo		= 6; // 所选择的城市关卡信息
+	optional int32 status			= 7; // 返回状态
+	repeated int32 cityIds			= 8; // 所有的城市id
+}

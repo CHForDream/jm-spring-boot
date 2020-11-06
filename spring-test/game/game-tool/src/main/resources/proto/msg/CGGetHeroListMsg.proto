@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGGetHeroListProto {
+  optional int32 msgType=1 [default = 2003];//协议类型
+  optional int32 reqType=2;//请求类型o表示英雄列表1表示匹配页面,2排位
+}

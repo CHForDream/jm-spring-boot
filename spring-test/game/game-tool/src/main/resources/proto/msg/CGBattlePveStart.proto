@@ -1,0 +1,12 @@
+syntax = "proto2";
+package buffer;
+
+//PVE(单机开始)
+message CGBattlePveStartProto {
+	optional int32 msgType		= 1[default = 25000]; // 协议号
+	optional int32 battleType	= 2; // 关卡类型  0 pve 1 副本
+	optional int32 cityId		= 3; // 副本所在的城市id
+	optional int32 pveId		= 4; // pve关卡Id
+	optional int32 dupId		= 5; // 副本id
+	optional int32 index		= 6; // 副本消耗资源索引	
+}

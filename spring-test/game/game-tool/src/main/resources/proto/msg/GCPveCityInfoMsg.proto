@@ -1,0 +1,23 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message DupInfo {
+	optional int32 dupId			= 1; // 当前副本id
+	optional int32 dupNum			= 2; // 当前副本已经打了几次
+	optional int32 dupStar			= 3; // 当前副本的星级
+}
+ 
+message CityInfo {
+	optional int32		cityId		= 1; // 当前所选择的城市id
+	repeated DupInfo	dupInfo		= 2; // 当前城市的副本信息
+}
+
+message GCPveCityInfoProto {
+	optional int32 msgType			= 1 [default = 7010]; //协议号
+	optional int32 pveId			= 2; // 当前第几关
+	optional int32 pveStatus		= 3; // 当前关卡状态 1解锁 2完成
+	optional int32 cityId			= 4; // 当前所在城市
+	optional CityInfo cityInfo		= 5; // 所选择的城市关卡信息
+	optional int32 status			= 6; // 返回状态
+	repeated int32 cityIds			= 7; // 所有的城市id
+}

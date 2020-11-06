@@ -1,0 +1,10 @@
+syntax = "proto2";
+package buffer;
+
+//修改玩家昵称
+message CGModifyRoleNameProto {
+  optional int32 msgType = 1[default = 5506];//协议号
+  optional string name = 2;//昵称
+  optional int32 sex = 3;//性别   1:男   2:女
+  optional string header = 4;//头像
+}

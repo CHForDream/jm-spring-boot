@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGMailReadProto {
+  optional int32 msgType=1 [default = 2202];//协议类型
+  optional int32 readType=2;//1读取邮件2，领取奖励 3，领取全部奖励
+  optional int32 mailType=3;//邮件类型1好友2系统
+  optional int64 params=4;//邮件ID
+}

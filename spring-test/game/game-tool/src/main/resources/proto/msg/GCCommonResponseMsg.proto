@@ -1,0 +1,12 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//服务器返回通用协议
+message GCCommonResponseProto {
+  optional int32 msgType = 1[default = 9001];//协议号
+  optional int32 status = 2;//状态码
+  optional int32 gold = 3;//金币(停用)
+  optional int32 homeMoney = 4;//金币
+  optional int32 blueCash = 5;//钻石
+  optional int32 rewardBlueCash = 6;//赠送的蓝钻(停用)
+  optional int32 dupStar = 7;// 副本的星星数量
+}

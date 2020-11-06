@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+//月卡信息
+message CGGetMonthCardInfoProto {
+  optional int32 msgType = 1[default = 4401];//协议号
+}

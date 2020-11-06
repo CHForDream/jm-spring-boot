@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//处理好友请求
+message CGDoFriendReqProto {
+  optional int32 msgType=1 [default = 2012];//协议类型
+  optional int64 uid=2;//对方ID
+  optional int32 type=3;//1同意，2拒绝
+}

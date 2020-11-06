@@ -1,0 +1,27 @@
+syntax = "proto2";
+package buffer;
+
+message GCRoleHomePageInfoProto{
+	optional int32 msgType = 1[default = 24022];//协议号
+	optional int32 status = 2;//协议状态
+	optional int32 heroCode = 3;//最爱英雄
+	optional int32 petsCode = 4;//最爱宠物
+	optional int64 friendUid = 5;//最爱好友uid
+	optional string friendName = 6;//最爱好友名字
+	optional int32 friendSex = 7;//最爱好友性别
+	optional int32 level = 8;//等级(停用)
+	optional int32 exp = 9;//当前经验(停用)
+	optional int32 maxExp = 10;//最大经验(停用)
+	optional string name = 11;//昵称
+	optional string personSign = 12;//个性签名
+	optional string header = 13;//头像
+	optional int32 pveTaskId = 14;//pve关卡
+	optional string friendHeader = 15;//最爱好友头像
+	optional int32 changeNameCardNum = 16;//改名卡数量
+	optional int32 friendsFabulousNum = 17;//获赞数量
+	optional int32 sex = 18;//性别
+	optional int64 showId = 19;//展示id
+	optional bool isMyFriend = 20;//是否为自己的好友
+	optional int32 normalDupTimes = 21;// 通关普通副本的次数
+	optional int32 hardDupTimes = 22;// 通关精英副本的次数
+}

@@ -1,0 +1,21 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message RewardProto{
+	optional int32 UnitType=1;//奖励类型
+	optional int32 unitId=2;//奖励id
+	optional int32 num=3;//奖励数量
+	optional string ext=4;//扩展[库类型,是否double]
+}
+//抽奖
+message GCLuckDrawMsgProto {
+	 optional int32 msgType=1 [default = 3317];//协议类型
+	 optional int32 status=2;//状态
+	 optional int32 type=3;//抽奖类型[1:单抽   2:五连抽]
+	 repeated RewardProto rewards = 4;//奖励
+	 optional int32 currLuckNum=5;//幸运值
+	 optional int64 nextFreeTime=6;//下次免费时间
+	 optional bool isDouble = 7;//是否翻倍
+	 optional string cash=8;//钻石数量
+	 optional int32 luckDrawNum = 9;//今天抽奖次数
+}

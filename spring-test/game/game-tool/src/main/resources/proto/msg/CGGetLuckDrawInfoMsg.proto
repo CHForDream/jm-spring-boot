@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//获取玩家抽奖信息
+message CGGetLuckDrawInfoProto {
+	 optional int32 msgType=1 [default = 3316];//协议类型
+}

@@ -1,0 +1,12 @@
+syntax = "proto2";
+package buffer;
+
+//月卡信息
+message GCGetMonthCardInfoProto {
+  optional int32 msgType = 1[default = 4401];//协议号
+  optional int32 status = 2;//状态
+  optional int64 monthCardAendTime = 3;//结束时间
+  optional int64 monthCardBEndTime = 4;//月卡B结束时间
+  optional int32 subscribeMonthCardB = 5;//是否订阅B  1:订阅  0:未订阅
+  optional int32 noPowerLimitReceiveNum = 6;//领取无限体力次数
+}

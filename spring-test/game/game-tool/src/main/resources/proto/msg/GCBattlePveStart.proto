@@ -1,0 +1,39 @@
+syntax = "proto2";
+package buffer;
+
+// import "Vo.proto";
+
+//PVE(单机开始)
+
+// 道具VO
+message ItemVo {
+	optional int32 itemId = 2;// 道具Id
+	optional int32 itemNum = 3;// 道具数量
+	optional int32 freeNum = 4;// 免费数量。0代表没有免费；大于0代表免费的数量
+}
+
+// 棋子VO
+message ChessVo {
+	optional int32 chessId = 1;// 棋子Id
+	optional int32 chessNum = 2;// 棋子数量
+}
+
+message GCBattlePveStartProto {
+	optional int32		msgType			= 1[default = 25000];// 协议号
+	optional int32		status			= 2; // 状态码. 10000成功; 10048前往背包使用体力药; 10049使用蓝钻购买体力; 10062关卡错误;
+	optional int32		battleType		= 3; // 关卡类型  0 pve 1 副本
+	optional int32		targetId		= 4; // 关卡Id. 如果status为10062, 该值为应该打的关卡Id
+	optional int32		heroId			= 5; //  英雄Id
+	optional int32		petId			= 6; // 宠物Id(停用)
+	repeated ItemVo		item			= 7; // 道具信息(战斗中道具， 固定)
+	repeated int32		preBattleItemId		= 8; // 战斗前选择道具Id(已消耗的)
+	optional int32		steps			= 9; // 关卡总步数
+	optional ChessVo	adChessVo		= 10; // 视频获得棋子
+	repeated ChessVo	conWinChessVo		= 11;// 连胜携带棋子
+	optional int32		pveConWinCardNum	= 12;// 连胜卡数量(停用)
+	optional int32		pveConWinNum		= 13;// 连胜次数
+	optional int32		costCash		= 14;// 加步数需要消耗的钻石
+	optional int32		addStepNum		= 15;// 消耗钻石增加的步数
+	optional int32		pveId			= 16; // pve表Id
+	optional int32		dupId			= 17; // duplicate表id
+}

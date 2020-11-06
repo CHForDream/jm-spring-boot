@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+// 切换地图用作引导
+message CGChangeCityProto {
+  optional int32 msgType	= 1[default = 7017];//协议号
+  optional int32 cityId		= 2; // 切换的城市id
+}

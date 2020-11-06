@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+//获取pve关卡信息
+message CGPveCityInfoProto {
+  optional int32 msgType	= 1[default = 7010];//协议号
+  optional int32 cityId		= 2; // 所选城市id 0表示为玩家当前所选择的城市
+  optional int32 selCityId	= 3; // 游戏内切换城市
+}

@@ -1,0 +1,14 @@
+syntax = "proto2";
+package buffer;
+
+message CGRoleHomePageSetUpProto{
+	optional int32 msgType = 1[default = 24023];//协议号
+	optional int32 optType = 2;//操作类型   1:改名   2:改头像  3:签名   4:好友 5:英雄  6:宠物
+	
+	optional string name = 3;//昵称
+	optional string header = 4;//头像
+	optional string sign = 5;//签名
+	optional int64 friendUid = 6;//好友
+	optional int32 heroCode = 7;//英雄
+	optional int32 petsCode = 8;//宠物
+}

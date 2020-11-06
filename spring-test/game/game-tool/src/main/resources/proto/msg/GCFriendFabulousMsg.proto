@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+message GCFriendFabulousProto{
+	optional int32 msgType = 1[default = 24019];//协议号
+	optional int32 status = 2;//协议状态
+	optional int32 addPower = 3;//获得体力数量(0:未获得体力,大于0获得体力,小于0体力已满)
+	optional int32 fabulousNum = 4;//点赞数量
+}

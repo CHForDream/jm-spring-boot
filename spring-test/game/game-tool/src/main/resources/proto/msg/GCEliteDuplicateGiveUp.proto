@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+// 精英副本放弃挑战
+message GCEliteDuplicateGiveUpProto {
+	optional int32 msgType = 1[default = 25204];//协议号
+	optional int32 status = 2; // 状态码. 10000成功;
+	optional int32 eliteId = 3;// 精英副本Id（城市Id）
+}

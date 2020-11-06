@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+//退出游戏
+message GCSignOutBattleProto {
+  optional int32 msgType = 1[default = 1068];//协议号
+  optional int32 status = 2;//协议状态
+}

@@ -1,0 +1,12 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+//发送走马灯
+message GCLampMsgProto {
+  optional int32 msgType = 1[default = 3304];//协议号
+  optional int32 status = 2;//状态码
+  optional string content = 3;//内容
+  optional int32 sort = 4;//优先级
+}
+
+

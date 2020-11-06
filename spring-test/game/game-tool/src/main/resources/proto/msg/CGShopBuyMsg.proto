@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGShopBuyProto {
+  optional int32 msgType=1 [default = 2230];//协议类型
+  optional int32 shopId = 2;//商城ID
+  optional int32 num = 3;//商城数量
+  optional int32 costType=4 ;//付费类型
+ 
+}

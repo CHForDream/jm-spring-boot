@@ -1,0 +1,12 @@
+syntax = "proto2";
+package buffer;
+
+//花费钻石增加步数
+message GCBattlePveFailedAddStepProto {
+	optional int32 msgType = 1[default = 21004];//协议号
+	optional int32 status = 2;// 协议状态 10000成功; 9999钻石不足
+	optional int32 addStep = 3;// 增加的步数
+	optional int32 costCash = 4;// 消耗的钻石
+	optional int32 costCashNext = 5;// 下次消耗的钻石
+	optional int32 opType = 6; // 0使用钻石加步数 1使用视频加步数
+}

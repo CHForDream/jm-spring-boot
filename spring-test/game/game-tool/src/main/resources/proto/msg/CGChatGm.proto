@@ -1,0 +1,6 @@
+syntax = "proto2";
+package buffer;
+message CGChatGmProto {
+  optional int32 msgType=1 [default = 2008];
+  optional string gmString= 2;
+}

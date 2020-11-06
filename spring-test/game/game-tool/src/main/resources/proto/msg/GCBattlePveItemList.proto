@@ -1,0 +1,28 @@
+syntax = "proto2";
+package buffer;
+
+//PVE战前道具
+
+// 道具VO
+message PreBattleItemVo {
+	optional int32 itemId = 2;// 道具Id
+	optional int32 itemNum = 3;// 道具数量
+	optional bool isSelect = 4;// 是否被选择
+	optional bool isInfinite = 5;// 是否处于无限道具时间
+	optional int32 remainingSeconds = 6;// 无限道具失效剩余时间（秒）
+}
+
+message RecommendItems {
+	optional int32	itemId = 1; // 道具id
+	optional int32	itemType = 2; // 道具类型
+	optional int32	needBuy = 3; // 是否需要玩家购买
+}
+
+//PVE战前道具
+message GCBattlePveItemListProto {
+	optional int32 msgType = 1[default = 25002];// 协议号
+	repeated PreBattleItemVo item = 2;// 战前选择道具信息
+	optional int32 coinNum = 3; // 连胜/连败次数
+	repeated RecommendItems recommend = 4; // 推荐的道具/英雄
+	optional int32 battleType = 5; // 战斗类型。0PVE；1副本；2精英副本
+}

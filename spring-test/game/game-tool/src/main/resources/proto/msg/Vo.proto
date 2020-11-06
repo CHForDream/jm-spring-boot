@@ -1,0 +1,15 @@
+syntax = "proto2";
+package buffer.vo;
+
+// 道具VO
+message ItemVo {
+	optional int32 itemType = 1;// 道具类型
+	optional int32 itemId = 2;// 道具Id
+	optional int32 itemNum = 3;// 道具数量
+}
+
+// 棋子VO
+message ChessVo {
+	optional int32 chessId = 1;// 棋子Id
+	optional int32 chessNum = 2;// 棋子数量
+}

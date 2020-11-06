@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGSellBagProto {
+  optional int32 msgType=1 [default = 2103];//协议类型
+  optional int32 unitType = 2;//资源类型
+  optional int64 dbId= 3;//资源ID
+  optional int32 unitNum = 4;//资源数量
+}

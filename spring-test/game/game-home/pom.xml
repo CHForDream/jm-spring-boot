@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.game</groupId>
+		<artifactId>game-root</artifactId>
+		<version>${game.version}</version>
+	</parent>
+	<artifactId>game-home</artifactId>
+	<name>game-home</name>
+
+	<properties>
+		<!-- 指明编译源代码时使用的字符编码，maven编译的时候默认使用的GBK编码， 通过project.build.sourceEncoding属性设置字符编码，告诉maven这个项目使用UTF-8来编译 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 解决首行报错 Unknow 错误 -->
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	</properties>
+
+	<dependencies>
+		<!-- const -->
+		<dependency>
+			<groupId>com.game</groupId>
+			<artifactId>game-const</artifactId>
+			<version>${game.version}</version>
+		</dependency>
+		<!-- core -->
+		<dependency>
+			<groupId>com.game</groupId>
+			<artifactId>game-core</artifactId>
+			<version>${game.version}</version>
+		</dependency>
+		<!-- db -->
+		<dependency>
+			<groupId>com.game</groupId>
+			<artifactId>game-db</artifactId>
+			<version>${game.version}</version>
+		</dependency>
+		<!-- gen -->
+		<dependency>
+			<groupId>com.game</groupId>
+			<artifactId>game-gen</artifactId>
+			<version>${game.version}</version>
+		</dependency>
+		<!-- rpc -->
+		<dependency>
+			<groupId>com.game</groupId>
+			<artifactId>game-rpc</artifactId>
+			<version>${game.version}</version>
+		</dependency>
+
+		<!-- spring cloud -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-commons</artifactId>
+		</dependency>
+
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- shardingsphere -->
+		<dependency>
+			<groupId>org.apache.shardingsphere</groupId>
+			<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shardingsphere</groupId>
+			<artifactId>sharding-jdbc-spring-namespace</artifactId>
+		</dependency>
+
+		<!-- dubbo -->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.game.GameMain</mainClass>
+						</manifest>
+					</archive>
+					<!-- 将依赖的jar包一起打包 -->
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<!-- <includes> <include>**/*.xml</include> </includes> -->
+					<excludes>
+						<exclude>application.properties</exclude>
+						<exclude>application-*.properties</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>
+								target/lib/
+							</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

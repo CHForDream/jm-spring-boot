@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+// 获取城市信息
+message CGCityInfoProto {
+  optional int32 msgType	= 1[default = 7015];//协议号
+  optional int32 infoType	= 2; // 城市信息类型 1景点收集信息 2景点关卡信息
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+// 同步精英副本剩余步数
+message CGEliteDuplicateSyncStepProto {
+	optional int32 msgType = 1[default = 25203];//协议号
+	optional int32 eliteId = 2;// 精英副本Id（城市Id）
+	optional int32 leftSteps = 3;// 当前剩余步数
+}

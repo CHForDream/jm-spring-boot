@@ -1,0 +1,6 @@
+syntax = "proto2";
+package buffer;
+
+message CGPowerFullProto{
+	optional int32 msgType = 1[default = 24024];//协议号
+}

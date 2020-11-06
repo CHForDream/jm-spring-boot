@@ -1,0 +1,12 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message GCShopBuyProto {
+  optional int32 msgType = 1[default = 2230];//协议号
+  optional int32 status = 2;//状态码 0成功 1货币不足
+  optional int32 shopId = 3;//商城ID
+  optional int32 num = 4;//数量
+  optional int32 cash = 5;//剩余钻石
+  optional int32 gold = 6;//剩余金币
+  optional int64 dbId = 7;//背包ID
+}

@@ -1,0 +1,13 @@
+syntax = "proto2";
+package buffer;
+
+// 副本刷新
+message GCDuplicateCheckProto {
+	optional int32 msgType		= 1[default = 25102]; // 协议号
+	optional int32 cityId		= 2; // 副本所在的城市Id
+	optional int32 dupId		= 3; // 副本Id
+	optional int32 index		= 4; // 副本消耗资源索引
+	optional int32 status		= 5; // 刷新是否成功的状态 10004;// 资源不足 10100;// 副本id错误
+	optional int32 coinNum		= 6; // 进入副本需要消耗的金币数
+	optional int32 diamondNum	= 7; // 进入副本需要消耗的钻石数
+}

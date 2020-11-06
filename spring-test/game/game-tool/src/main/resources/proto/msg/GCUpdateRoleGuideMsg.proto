@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+//客户端上报引导信息
+message GCUpdateRoleGuideProto {
+  optional int32 msgType = 1[default = 5501];//协议号
+  optional int32 status = 2;//状态
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+
+message CGSubscribeMonthCardBProto{
+   optional int32 msgType = 1[default = 24027];//协议号
+   optional int32 optType = 2;//操作  1:订阅   2:取消订阅
+}

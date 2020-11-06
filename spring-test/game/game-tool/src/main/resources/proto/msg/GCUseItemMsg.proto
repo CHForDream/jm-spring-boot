@@ -1,0 +1,18 @@
+syntax = "proto2";
+package buffer;
+
+// 打开礼包获得的道具
+message GiftItem {
+	optional int32 itemType= 1;// 道具类型
+	optional int32 itemId=2;// 道具Id
+	optional int32 itemNum= 3;// 道具数量
+}
+
+message GCUseItemProto {
+	optional int32 msgType = 1[default = 2102];
+	optional int32 status = 2;// 结果码. 10000成功; 10002参数错误; 10004数量不足;
+	optional int32 itemType = 3;// 道具类型。3道具；4礼包
+	optional int32 itemId = 4;// 使用的道具Id
+	repeated GiftItem units= 6;// 使用礼包获得的道具信息
+	optional int32 newVal= 7;// 使用体力药之后的体力值
+}

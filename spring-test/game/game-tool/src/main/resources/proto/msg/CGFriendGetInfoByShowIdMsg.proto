@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+message CGFriendGetInfoByShowIdProto{
+	optional int32 msgType = 1[default = 24020];//协议号
+	optional int64 showId = 2;// 玩家显示id
+}

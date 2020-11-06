@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message GCDoFriendReqProto {
+  optional int32 msgType = 1[default = 2012];//协议号
+  optional int32 status = 2;//状态码 -1，重复添加好友-2好友数量达到上限
+}

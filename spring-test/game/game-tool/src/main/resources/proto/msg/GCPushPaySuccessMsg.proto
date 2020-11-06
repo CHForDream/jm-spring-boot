@@ -1,0 +1,12 @@
+syntax = "proto2";
+package buffer;
+
+//充值成功
+message GCPushPaySuccessProto {
+  optional int32 msgType = 1[default = 4403];//协议号
+  optional int32 status = 2;
+  optional int32 id = 3;//充值挡位
+  optional int32 blueCashNum = 4;//充值钻石数
+  optional int32 rewardBlueCashNum = 5;//奖励钻石数
+  optional string items = 6;//道具
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//抽奖
+message CGLuckDrawMsgProto {
+	 optional int32 msgType=1 [default = 3317];//协议类型
+	 optional int32 type=2;//抽奖类型[1:单抽   2:五连抽]
+	 
+}

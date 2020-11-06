@@ -1,0 +1,5 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGGetAchieveListProto {
+  optional int32 msgType=1 [default = 2220];//协议类型
+}

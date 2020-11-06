@@ -1,0 +1,23 @@
+syntax = "proto2";
+package buffer;
+
+// import "Vo.proto";
+
+// 道具VO
+message ItemVo {
+	optional int32 itemType = 1;// 道具类型
+	optional int32 itemId = 2;// 道具Id
+	optional int32 itemNum = 3;// 道具数量
+}
+
+message GCBattleChangeChoiceHeroAndHeroDecProto {
+	optional int32 msgType=1 [default = 24018];//协议类型
+	optional int32 status=2;//协议状态
+	optional int32 heroCode=3;//英雄code
+	optional int32 petsId = 4;//宠物id(停用)
+	// repeated buffer.vo.ItemVo item = 5;// 道具信息
+	repeated ItemVo item = 5;// 道具信息
+	optional int64 uid = 6;//角色id
+	optional string name=7;//角色昵称
+	optional bool lock=8;//是否锁定
+}

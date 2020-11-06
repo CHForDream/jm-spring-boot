@@ -1,0 +1,12 @@
+syntax = "proto2";
+package buffer; 
+//获取玩家抽奖信息
+message GCGetLuckDrawInfoProto {
+	optional int32 msgType=1 [default = 3316];//协议类型
+	optional int32 status=2;//状态
+	optional int32 luckNum=3;//幸运值
+	optional int64 nextFreeTime=4;//下次免费抽奖时间(毫秒)
+	optional int32 maxLuckNum=5;//幸运值
+	optional string cost=6;//消耗[单抽,五]
+	optional int32 luckDrawNum = 7;//今日抽奖次数
+}

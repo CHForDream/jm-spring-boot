@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGConnectProto {
+  optional int32 msgType=1 [default = 1000];//协议类型
+  optional int64 uid= 2;//玩家ID
+}

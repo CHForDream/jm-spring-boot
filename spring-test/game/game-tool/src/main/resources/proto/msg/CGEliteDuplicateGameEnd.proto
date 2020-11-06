@@ -1,0 +1,22 @@
+syntax = "proto2";
+package buffer;
+
+message ChessDto {
+	optional int32 chessId = 1;// 棋子Id
+	optional int32 chessNum = 2;// 棋子数量
+}
+
+message ComboDto {
+	optional int32 comboId = 1;// 连击种类id 8:（1-2连击）9:（3-4连击）
+	optional int32 num = 2;// 连击数量
+}
+
+// 精英副本战斗结果
+message CGEliteDuplicateGameEndProto {
+	optional int32 msgType = 1[default = 25206]; //协议号
+	optional int32 eliteId = 2;// 精英副本Id（城市Id）
+	optional int32 result = 3; // 战斗结果. 0失败; 1胜利
+	repeated ChessDto chessInfo = 4; // 搜集的棋子信息
+	repeated ChessDto composeInfo = 5; // 合成的棋子信息
+	repeated ComboDto comboInfo = 6; // 连击信息
+}

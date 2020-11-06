@@ -1,0 +1,11 @@
+syntax = "proto2";
+package buffer;
+
+//解锁关卡
+message GCPveCityUnlockProto {
+	optional int32 msgType			= 1[default = 7012];//协议号
+	optional int32 pveId			= 2; // 当前第几关
+	optional int32 pveStatus		= 3; // 当前关卡状态 1解锁 2完成
+	optional int32 cityId			= 4; // 当前所在城市
+	optional int32 status			= 5; // 装饰的错误信息
+}

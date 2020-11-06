@@ -1,0 +1,14 @@
+syntax = "proto2";
+package buffer;
+message GCDoLoginProto {
+  optional int32 msgType=1 [default = 2001];//协议类型
+  optional int32 status= 2;//状态码. 10000成功;1平台账号验证失败;2客户端连接的服务器不是逻辑服;3无效的平台账号;-1001登录异常
+  optional int32 sessionKey= 3;//通信token
+  optional int64 uid= 4;//角色ID
+  optional int32 isnew= 5;//是否新玩家
+  optional int32 isdebug= 6;//是否为审核版本
+  optional int64 timeMill= 7;//服务器当前时间（单位毫秒）
+  optional string chatServer=8;//聊天服務器IP
+  optional int32 chatPort=9;//聊天服务器端口
+  optional bool isReconnect=10;// 是否是重连登录(看广告返回使用)
+ }

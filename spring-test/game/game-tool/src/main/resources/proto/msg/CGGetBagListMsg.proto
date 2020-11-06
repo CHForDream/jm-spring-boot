@@ -1,0 +1,6 @@
+syntax = "proto2";
+package buffer;
+message CGGetBagListProto {
+  optional int32 msgType=1 [default = 2101];
+  optional int32 type= 2;//3道具,4礼包
+}

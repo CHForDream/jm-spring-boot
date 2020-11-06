@@ -1,0 +1,10 @@
+syntax = "proto2";
+package buffer;
+
+// 领取城市进度奖励
+message GCCityAwardProto {
+  optional int32 msgType	= 1[default = 7016];//协议号
+  optional int32 infoType	= 2; // 城市信息类型 1景点收集信息 2景点关卡信息
+  optional int32 cityId		= 3; // 领取奖励的城市id
+  optional int32 status		= 4; // 错误码
+}

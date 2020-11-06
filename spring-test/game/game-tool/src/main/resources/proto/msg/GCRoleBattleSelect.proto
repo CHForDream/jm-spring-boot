@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+message GCRoleBattleSelectProto {
+	optional int32 msgType = 1 [default = 24101];
+	optional int32 status = 2;// 状态码 10000成功
+	optional int32 battleType = 3; // 战斗类型 0PVE 1副本 2精英副本
+}

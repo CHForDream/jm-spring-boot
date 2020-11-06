@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+// 所有活动信息
+message CGActivityInfoProto {
+	optional int32 msgType = 1[default = 26000];//协议号
+	optional int32 activityId = 2;// 活动id. 0代表全部活动信息
+}

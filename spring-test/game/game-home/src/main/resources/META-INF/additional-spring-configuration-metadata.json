@@ -1,0 +1,135 @@
+{"properties": [
+  {
+    "name": "game.home.redis.host",
+    "type": "java.lang.String",
+    "description": "home server redis host"
+  },
+  {
+    "name": "game.home.redis.port",
+    "type": "java.lang.Integer",
+    "description": "home server redis port"
+  },
+  {
+    "name": "game.home.redis.password",
+    "type": "java.lang.String",
+    "description": "home server redis password"
+  },
+  {
+    "name": "game.home.redis.db",
+    "type": "java.lang.Integer",
+    "description": "home server redis db"
+  },
+  {
+    "name": "game.service.redis.host",
+    "type": "java.lang.String",
+    "description": "A description for 'game.service.redis.host'"
+  },
+  {
+    "name": "game.service.redis.port",
+    "type": "java.lang.String",
+    "description": "A description for 'game.service.redis.port'"
+  },
+  {
+    "name": "game.service.redis.password",
+    "type": "java.lang.String",
+    "description": "A description for 'game.service.redis.password'"
+  },
+  {
+    "name": "game.service.redis.db",
+    "type": "java.lang.String",
+    "description": "A description for 'game.service.redis.db'"
+  },
+  {
+    "name": "game.server.version",
+    "type": "java.lang.String",
+    "description": "A description for 'game.home.version'"
+  },
+  {
+    "name": "game.server.gssid",
+    "type": "java.lang.String",
+    "description": "A description for 'game.home.gssid'"
+  },
+  {
+    "name": "game.server.sid",
+    "type": "java.lang.Integer",
+    "description": "A description for 'game.home.sid'"
+  },
+  {
+    "name": "game.server.manager.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.server.manager.enable'",
+    "defaultValue": true
+  },
+  {
+    "name": "game.home.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.home.enable'",
+    "defaultValue": true
+  },
+  {
+    "name": "game.home.main.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.home.isMain'",
+    "defaultValue": true
+  },
+  {
+    "name": "game.home.servers",
+    "type": "java.lang.String",
+    "description": "A description for 'game.home.servers.sid'"
+  },
+  {
+    "name": "game.home.gm.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.home.gm.enable'",
+    "defaultValue": false
+  },
+  {
+    "name": "game.home.chat.ip",
+    "type": "java.lang.String",
+    "description": "A description for 'game.home.chat.ip'"
+  },
+  {
+    "name": "game.home.dubbo.port",
+    "type": "java.lang.Integer",
+    "description": "A description for 'game.home.dubbo.port'"
+  },
+  {
+    "name": "game.battle.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.battle.enable'",
+    "defaultValue": true
+  },
+  {
+    "name": "game.battle.port",
+    "type": "java.lang.String",
+    "description": "A description for 'game.battle.port'"
+  },
+  {
+    "name": "game.battle.ssl.enbale",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.battle.ssl.enbale'",
+    "defaultValue": false
+  },
+  {
+    "name": "game.chat.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.chat.enable'",
+    "defaultValue": true
+  },
+  {
+    "name": "game.chat.port",
+    "type": "java.lang.String",
+    "description": "A description for 'game.chat.port'"
+  },
+  {
+    "name": "game.log.enable",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'game.log.enable'",
+    "defaultValue": true
+  },
+  {
+    "name": "game.log.path",
+    "type": "java.lang.String",
+    "description": "A description for 'game.log.path'"
+  }
+]}

@@ -1,0 +1,31 @@
+syntax = "proto2";
+package buffer;
+
+message GemStoneSlotProto{
+	optional int32 index = 1;//下标
+	optional bool isOpen = 2;//是否开启
+	optional int32 stoneId = 3;//宝石id
+}
+
+message PvPItemProto{
+	optional int32 itemType = 1;//
+	optional int32 itemId = 2;//
+	optional int32 itemNum = 3;//
+	optional int32 pos = 4;//位置
+	optional int32 limit = 5;//可携带上限
+}
+message HeroGCGetHeroList {
+	optional int64 heroId = 1;
+	optional int32 heroCode = 2;//英雄Code
+	optional int32 petId = 3;//宠物(停用)
+	optional int32 reikiId = 4;//灵气(停用)
+	optional int32 expressionId = 5;//表情(停用)
+	repeated GemStoneSlotProto gemStoneInfo = 6;// (停用)
+	optional int32 proficiency = 7;//熟练度(停用)
+	repeated PvPItemProto takeItems = 8;// (停用)
+}
+message GCGetHeroListProto {
+	optional int32 msgType=1 [default = 2003];
+	repeated HeroGCGetHeroList heros = 2;// 英雄列表
+}
+

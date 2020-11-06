@@ -1,0 +1,5 @@
+syntax = "proto2";
+package buffer;
+message CGPowerGetInfoProto {
+  optional int32 msgType=1 [default = 1073];
+}

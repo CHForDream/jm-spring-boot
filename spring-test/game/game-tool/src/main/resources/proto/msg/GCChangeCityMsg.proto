@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message GCChangeCityProto {
+	optional int32 msgType			= 1 [default = 7017]; //协议号
+	optional int32 cityId			= 2; // 转到的城市id
+	optional int32 status			= 3; // 返回状态
+}

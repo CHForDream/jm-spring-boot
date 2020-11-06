@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+message CGRoleHomePageInfoProto{
+	optional int32 msgType = 1[default = 24022];//协议号
+	optional int64 targetUid = 2;//被查看玩家的uid
+}

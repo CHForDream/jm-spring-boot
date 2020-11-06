@@ -1,0 +1,29 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//获取好友列表
+message FriendGCFriendsList {
+    optional int64 friendId = 1;//好友ID
+    optional string nickName = 2;//昵称
+    optional string avatar = 3[default = ""];//头像
+    optional string lv=4;//比赛等级(停用)
+    optional int32 vip=5;//VIP等级
+    optional int32 sex=6;//性別1男2女
+    optional int64 offMill=7;//离线时间，0表示在线
+    optional int32 gameStatus=8;//游戏状态1，游戏中
+    optional int32 point=9;//分(停用)
+    optional int32 step=10;//段位(停用)
+    optional int32 friendPoint=11;//亲密度
+    optional int32 hasSendFriendShip=12;//1表示可赠送2表示已赠送
+    optional int32 canReceiveFriendShip=13;//0不可收取1表示可收取2表示已收取
+    optional int64 showId = 14;//角色显示的id
+    
+}
+message GCFriendsListProto {
+  optional int32 msgType = 1[default = 2010];//协议号
+  optional int32 status = 2;//状态码
+  optional int32 type=3;//0全部好友，1附近，2最近游戏好友
+  repeated FriendGCFriendsList friends = 4;//好友列表
+  repeated FriendGCFriendsList recommentFriends = 5;//推荐好友列表
+  repeated int64 fabulousFriends = 6;//我赞过的好友列表
+   optional int32 fabulousNum = 7;//点赞数量
+}

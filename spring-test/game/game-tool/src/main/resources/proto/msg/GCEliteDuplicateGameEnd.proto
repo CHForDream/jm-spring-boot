@@ -1,0 +1,18 @@
+syntax = "proto2";
+package buffer;
+
+//PVE(单机结算)
+
+message ItemDto {
+	optional int32 itemType = 1;// 物品类型
+	optional int32 itemId = 2;// 物品Id
+	optional int32 itemNum = 3;// 物品数量
+}
+
+message GCEliteDuplicateGameEndProto {
+	optional int32 msgType = 1[default = 25206]; // 协议号
+	optional int32 status = 2; // 状态码。 10000成功；
+	optional int32 eliteId = 3;// 精英副本Id（城市Id）
+	optional int32 result = 4; // 战斗结果。 0失败；1胜利
+	repeated ItemDto rewardItem = 5; // 结算奖励
+}

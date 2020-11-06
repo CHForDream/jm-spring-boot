@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+message CGFriendFabulousProto{
+	optional int32 msgType = 1[default = 24019];//协议号
+	optional int64 targetUid = 2;//给哪个玩家点赞
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+//抽奖
+message CGHttpBeatProto {
+	 optional int32 msgType=1 [default = 2007];//协议类型
+	 optional int64 uid=2;//角色id
+	 
+}

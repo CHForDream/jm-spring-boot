@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+
+message GCSubscribeMonthCardBProto{
+   optional int32 msgType = 1[default = 24027];//协议号
+   optional int32 status = 2;//协议状态
+}

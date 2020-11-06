@@ -1,0 +1,22 @@
+syntax = "proto2";
+package buffer;
+
+message DupInfo {
+	optional int32	dupId	= 1; // 副本id
+	optional int32	dupNum	= 2; // 副本通关次数
+	optional int32	dupStar	= 3; // 副本星级
+}
+
+message CityInfo {
+	optional int32		cityId	= 1; // 城市id
+	optional int32		status	= 2; // 城市状态 0未完成 1已完成 2已领取
+	repeated DupInfo	dupInfo	= 3; // 副本状态信息
+}
+
+//获取景点收集/城市关卡信息
+message GCCityInfoProto {
+  optional int32 msgType	= 1[default = 7015];//协议号
+  optional int32 infoType	= 2; // 城市信息类型 1景点收集信息 2景点关卡信息
+  repeated CityInfo cityInfo = 3; // 城市信息列表
+  optional int32 status		= 4; // 错误码
+}

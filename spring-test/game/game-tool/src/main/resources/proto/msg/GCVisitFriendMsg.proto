@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message GCVisitFriendProto {
+  optional int32 msgType=1 [default = 2020];//协议类型
+  optional int64 friendId= 2;//好友ID
+ optional int32 hasReveive=3;//是否已收取
+ optional int32 hasScend=4;//是否发送
+ optional int32 hasGift=5;//是否有礼物
+}

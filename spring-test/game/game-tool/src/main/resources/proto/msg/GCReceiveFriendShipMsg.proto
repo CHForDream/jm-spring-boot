@@ -1,0 +1,12 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//赠送好友点返回
+message GCReceiveFriendShipProto {
+  optional int32 msgType = 1[default = 2022];//协议号
+  optional int32 status = 2;//状态码
+  optional int32 friendShip=3;//最新的好友点
+   optional int32 friendPoint=4;//亲密度
+  optional int64 targetUid=5;//对方的UID
+   optional int32 hasSendFriendShip=6;//1表示可赠送2表示已赠送
+   optional int32 canReceiveFriendShip=7;//1表示可2表示已
+}

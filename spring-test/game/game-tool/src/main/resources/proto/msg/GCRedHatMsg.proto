@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//7日签到状态获取
+message GCRedHatProto{
+	optional int32 msgType = 1[default = 3307];//协议号
+	optional int32 status = 2;//状态码
+  	repeated int32 systemId = 3;//有红点的系统
+  	
+}

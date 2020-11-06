@@ -1,0 +1,20 @@
+syntax = "proto2";
+package buffer;
+
+message FriendsHeroInfoProto{
+	optional int32 heroCode = 1;//英雄code
+	optional int32 petsId = 2;//宠物id(停用)
+}
+
+message GCFriendGetInfoByShowIdProto{
+	optional int32 msgType = 1[default = 24020];//协议号
+	optional int32 status = 2;//协议状态
+	optional string name = 3;//昵称
+	optional string header = 4;//头像
+	optional int32 pveTaskId = 5;//pve关卡
+	repeated FriendsHeroInfoProto heroCodes = 6;//拥有的英雄
+	optional int64 showId = 7;//显示id
+	optional int64 uid = 8;//角色id
+	optional int32 heroCode = 9;//最爱英雄
+	optional int32 petsCode = 10;//最爱宠物(停用)
+}

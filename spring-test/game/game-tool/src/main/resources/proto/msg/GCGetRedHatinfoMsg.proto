@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+//获取小红帽
+message GCGetRedHatinfoProto {
+  optional int32 msgType = 1[default = 5504];//协议号
+  optional int32 status = 2;//状态
+  repeated int32 redHatIds = 3;//小红冒标识
+}

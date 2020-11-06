@@ -1,0 +1,14 @@
+syntax = "proto2";
+package buffer;
+
+message RewardInfo {
+	optional int32 itemType = 1;
+	optional int32 itemId	= 2;
+	optional int32 itemNum	= 3;
+}
+//pve战斗结束后额外奖励
+message GCPveCityAwardProto {
+	optional int32		msgType			= 1[default = 7013];//协议号
+	repeated RewardInfo	hardAwards		= 2; // pve关卡的难度奖励
+	repeated RewardInfo	chessAwards		= 3; // pve关卡的宝箱奖励
+}

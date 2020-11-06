@@ -1,0 +1,16 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGChatProto {
+  optional int32 msgType=1 [default = 2004];//协议类型
+  optional int32 chatType= 2;//聊天类型 1群聊 2私聊
+  optional int32 chatParam= 3;//聊天参数
+  optional int64 fromUid= 4;//发送者
+  optional int64 toUid= 5;//接受者
+  optional string name= 6;//名字
+  optional string aren= 7;//地区
+  optional int32 sex= 8;//性别1男2女
+  optional string head= 9;//头像
+  optional int32 lv= 10;//等级
+  optional string cont= 11;//内容
+  optional bytes voice= 12;//语音
+}

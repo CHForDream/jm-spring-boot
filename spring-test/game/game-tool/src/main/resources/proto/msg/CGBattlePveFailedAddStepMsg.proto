@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+//增加步数
+message CGBattlePveFailedAddStepProto {
+  optional int32 msgType = 1[default = 21004];//协议号
+  optional int32 opType = 2; // 0使用钻石加步数 1使用视频加步数
+}

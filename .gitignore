@@ -13,3 +13,12 @@ spring-test/canal-test/.settings/
 spring-test/canal-test/target/
 spring-test/dubbo-test/.settings/
 spring-test/dubbo-test/target/
+spring-test/game/.settings/
+spring-test/game/game-core/.settings/
+spring-test/game/game-db/.settings/
+spring-test/game/game-gen/.settings/
+spring-test/game/game-home/.settings/
+spring-test/game/game-robot/.settings/
+spring-test/game/game-robot/target/
+spring-test/game/game-tool/.settings/
+spring-test/game/game-tool/target/

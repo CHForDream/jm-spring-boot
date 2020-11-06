@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+//获取首充状态
+message CGGetRoleFirstPayInfoProto {
+  optional int32 msgType = 1[default = 4404];//协议号
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+//领取首充奖励
+message GCReCeiveFirstPayRewardProto {
+  optional int32 msgType = 1[default = 4405];//协议号
+  optional int32 status = 2;//协议状态
+  optional string reward = 3;//领取的奖励内容
+}

@@ -1,0 +1,19 @@
+syntax = "proto2";//ָ���汾��Ϣ����ָ���ᱨ��
+package buffer; //package������
+
+message nextAchieveProto {
+    optional int32 taskId = 1;//任务ID
+    optional string process = 2;//进度
+    optional int32 status = 3;//0未完成1可领取2已领取
+}
+
+message GCGetAchieveRewardProto {
+   optional int32 msgType=1 [default = 2221];//��������
+  optional int32 status= 2;//0�ɹ�,1ʧ��
+  optional int32 rewardType = 3;//��������1����2��Ծ
+  optional int32 totalReward=4;//��Ծ�Ƚ���ID
+  optional int32 taskId=5;//����ID
+  optional int32 point=6;//��Ծ��
+  optional string activeList = 7;//�����Ծ��1,2,3
+  optional nextAchieveProto next = 8;
+}

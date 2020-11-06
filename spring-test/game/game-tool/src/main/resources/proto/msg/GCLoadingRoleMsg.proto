@@ -1,0 +1,37 @@
+syntax = "proto2";//ָ���汾��Ϣ����ָ���ᱨ��
+package buffer; //package������
+
+message MainTaskInfoProto{
+	optional int32 stars = 1;//星星
+	optional int32 taskId = 2;//任务id
+	optional int32 taskStatus = 3;//任务状态
+	optional int32 process = 4;//任务进度
+}
+
+message GCLoadingRoleProto {
+  optional int32 msgType=1 [default = 2002];
+  optional int32 lv=2;//(停用)
+  optional int32 exp=3;//(停用)
+  optional int64 cash=4;//钻石(停用)
+  optional int64 gold=5;//金币(停用)
+  optional string avatar=6;//头像
+  optional int32 sex=7;//性别
+  optional string name=8;//角色名
+  optional int32 notice=9;//?
+  optional int32 step=10;//(停用)
+  optional int32 point=11;//(停用)
+  optional int32 stoneDebris=12;//宝石碎片(停用)
+  optional int64 serverTime=13;//服务器当前时间
+  optional int64 blueCash=14;//充值钻石
+  optional bool isShowSign=15;//是否显示签到
+  optional bool isShowFirtPay=16;//是否显示首充
+  optional int32 pveTaskId=17;//pve关卡id
+  optional MainTaskInfoProto mainTaskInfo=18;//主线任务信息(停用)
+  optional int32 power=19;//体力
+  optional int32 updatePowerTime=20;//下次更新体力的时间
+  optional int32 infinitePowerEndTime=21;//无限体力结束时间
+  optional int32 pveChoiceHeroCode = 22;//pve最后选择的英雄(停用)
+  optional int32 pveConWinNum = 23;//pve连胜次数
+  optional int32 pvpBattleNum = 24;//pvp剩余次数
+  optional int32 dupStar = 25; // 副本星星数量
+}

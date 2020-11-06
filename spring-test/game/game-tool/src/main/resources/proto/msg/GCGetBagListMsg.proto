@@ -1,0 +1,14 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message UnitProtoGCGetBagList{
+    optional int64 id= 1;//道具ID
+    optional int32 unitType=2;//0全部,3道具,4礼包,5英雄碎片,6宝石碎片
+    optional int32 unitId= 3;//道具ID(与id重复了)
+    optional int32 num= 4;//数量
+ }
+message GCGetBagListProto {
+  optional int32 msgType = 1[default = 2101];//协议号
+  optional int32 status = 2;//状态码
+  optional int32 type=3;//3道具,4礼包,5英雄碎片,6宝石碎片
+  repeated UnitProtoGCGetBagList units= 4;//资源列表
+}

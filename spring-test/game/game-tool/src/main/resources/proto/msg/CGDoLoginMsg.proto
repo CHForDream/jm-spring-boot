@@ -1,0 +1,16 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGDoLoginProto {
+	optional int32 msgType=1 [default = 2001];//协议类型
+	optional string userId= 3;//渠道前缀＋渠道用户id，游戏需要将该字段的值与游戏角色绑定
+	optional string avatar= 8;//渠道用户头像链接（可能为空）
+	optional string nickname= 9;//渠道用户昵称（可能为空）
+	optional string token= 10;//令牌
+	optional int32 sex=11;//1男2女
+	optional string deviceId=15;//设备Id
+	optional string platformToken=17;//平台Token
+	optional int32 platform=18;
+	optional int32 channel=19;
+	optional bool isReconnect=21;// 是否是重连登录(看广告返回使用)
+
+}

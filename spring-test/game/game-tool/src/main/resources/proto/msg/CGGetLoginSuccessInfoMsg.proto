@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+//角色登陆成功后触发
+message CGGetLoginSuccessInfoProto {
+  optional int32 msgType = 1[default = 5003];//协议号
+}

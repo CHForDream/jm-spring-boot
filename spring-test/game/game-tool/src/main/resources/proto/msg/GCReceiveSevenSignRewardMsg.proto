@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//7日签到
+message GCReceiveSevenSignRewardProto {
+	optional int32 msgType = 1[default = 3305];//协议号
+	optional int32 status = 2;//状态码[0:成功  1:参数错误  2:领取天数与服务器不符 3:签到失败]
+	optional string reward = 3;//奖励内容  类型,id,数量
+}

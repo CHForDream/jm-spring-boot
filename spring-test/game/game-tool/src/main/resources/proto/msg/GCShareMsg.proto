@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+message GCShareProto {
+  optional int32 msgType = 1[default = 8002];//协议号
+  optional int32 status = 2;//状态码. 10000成功; 10055无分享次数; 10056重复请求
+  optional int32 shareType = 3;//分享类型: 1每日分享, 2战斗结算翻倍, 3PVE加步数, 4战前随机棋子
+  optional string items = 4;//1-2:奖励内容; 3:为null; 4:随机棋子Id
+}

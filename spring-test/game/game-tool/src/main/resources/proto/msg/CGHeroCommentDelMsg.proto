@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message CGHeroCommentDelProto {
+  optional int32 msgType=1 [default = 24016];//协议类型  
+  optional int32 heroCode=2;//英雄标识
+  optional int32 type=3;//评论类型  1:英雄  2:宠物
+}

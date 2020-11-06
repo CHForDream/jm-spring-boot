@@ -1,0 +1,16 @@
+syntax = "proto2";
+package buffer;
+
+message PayInfoProto{
+	optional bool isFirst=1;//是否是首充
+	optional int32 codeId=2;//id
+}
+
+
+//充值挡位信息
+message GCGetPayInfoProto {
+  optional int32 msgType = 1[default = 4402];//协议号
+  optional int32 status = 2;
+  repeated PayInfoProto payInfos = 3;
+  
+}

@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+message CGShareProto {
+  optional int32 msgType = 1[default = 8002];//协议号
+  optional int32 shareType = 2;//分享类型: 1每日分享, 2战斗结算翻倍, 3PVE加步数, 4战前随机道具
+}

@@ -1,0 +1,12 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message GCSellBagProto {
+  optional int32 msgType=1 [default = 2103];//协议类型
+  optional int32 status = 2;//状态码
+  optional int64 dbId=3;//数据库ID
+  optional int32 unitType = 4;//资源类型
+  optional int32 unitNum = 5;//剩余数量
+  optional int32 addGold = 6;//获得金币
+  
+}
+

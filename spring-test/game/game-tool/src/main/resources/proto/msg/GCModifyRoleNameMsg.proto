@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+//修改玩家昵称
+message GCModifyRoleNameProto {
+  optional int32 msgType = 1[default = 5506];//协议号
+  optional int32 status = 2;
+}

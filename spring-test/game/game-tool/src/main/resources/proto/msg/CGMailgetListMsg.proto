@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGMailgetListProto {
+  optional int32 msgType=1 [default = 2201];//协议类型
+  optional int32 mailType=2;//类型1好友邮件2系统邮件
+}

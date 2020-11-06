@@ -1,0 +1,18 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//获取好友列表
+message FriendReqGCFriendReqList {
+    optional int64 friendId = 1;//好友ID
+    optional string nickName = 2;//昵称
+    optional string avatar = 3;//头像
+    optional string lv=4;//等级(停用)
+    optional int32 vip=5;//VIP等级
+    optional int32 sex=6;//性別1男2女
+    optional int32 step=7;//段位
+    optional int32 point=8;//赛季分
+}
+message GCFriendReqListProto {
+  optional int32 msgType = 1[default = 2013];//协议号
+  optional int32 status = 2;//状态码
+  repeated FriendReqGCFriendReqList friends = 4;//好友请求列表
+}

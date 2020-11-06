@@ -1,0 +1,23 @@
+syntax = "proto2";
+package buffer;
+
+// 精英副本战斗开始
+
+// 道具DTO
+message ItemDto {
+	optional int32 itemId = 1;// 道具Id
+	optional int32 itemNum = 2;// 道具数量
+	optional int32 freeNum = 3;// 免费数量。0代表没有免费；大于0代表免费的数量
+}
+
+message GCEliteDuplicateGameStartProto {
+	optional int32 msgType = 1[default = 25205];// 协议号
+	optional int32 status = 2; // 状态码. 10000成功;
+	optional int32 eliteId = 3; // 精英副本Id
+	optional int32 targetId = 4; // 关卡Id
+	optional int32 heroId = 5; // 英雄Id
+	repeated int32 selectedItemId = 6; // 战斗前选择道具Id(已消耗的)
+	repeated ItemDto item = 7; // 道具信息(战斗中道具)
+	optional int32 leftSteps = 8; // 剩余总步数
+	optional int32 leftStepsBuyTimes = 9;// 剩余步数购买次数
+}

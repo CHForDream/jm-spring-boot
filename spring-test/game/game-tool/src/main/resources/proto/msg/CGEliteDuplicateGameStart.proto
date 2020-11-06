@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+// 精英副本开始战斗
+message CGEliteDuplicateGameStartProto {
+	optional int32 msgType = 1[default = 25205]; // 协议号
+	optional int32 eliteId = 2; // 精英副本Id
+}

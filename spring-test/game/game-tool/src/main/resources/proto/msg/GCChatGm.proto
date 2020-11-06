@@ -1,0 +1,6 @@
+syntax = "proto2";
+package buffer;
+message GCChatGmProto {
+  optional int32 msgType=1 [default = 2008];
+  optional int32 status= 2;//状态码
+}

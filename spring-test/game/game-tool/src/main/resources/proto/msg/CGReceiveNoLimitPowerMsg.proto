@@ -1,0 +1,7 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+
+message CGReceiveNoLimitPowerProto {
+  optional int32 msgType = 1[default = 24026];//协议号
+}

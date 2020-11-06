@@ -1,0 +1,22 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message MailGCMailgetList {
+    optional int64 mailId= 1;//ID
+    optional string title= 2;//标题
+    optional string content= 3;//内容
+    optional string rewards= 4;//道具类型,道具ID,道具数量;道具类型,道具ID,道具数量
+    optional int32 rewardStatus=5;//1可领取2已领取
+    optional int32 readstatus= 6;//0未读2已读
+    optional int64 remindMill= 7;//剩余时间
+    optional string name= 8;//名字
+    optional string head=9;//头像
+    optional string params=10;//参数
+    optional int64 sendTime= 11;//邮件发送时间
+}
+message GCMailgetListProto {
+  optional int32 msgType = 1 [default = 2201];//协议类型
+  optional int32 status = 2;//状态码
+  optional int32 mailType = 3;//类型 1好友邮件 2系统邮件
+  repeated MailGCMailgetList mails = 4;//邮件列表
+}

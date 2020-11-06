@@ -1,0 +1,25 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message ActivityReward {
+  optional int32 id = 1;// 档位id
+  optional int32 target = 2;// 奖励目标
+  optional int32 status = 3;// 奖励状态[0:不可领取  1:可领取  2:已领取]
+  optional string rewrd = 4;// 奖励内容	
+}
+
+message ActivityInfo {
+	optional int32 id = 1;// 活动id
+	optional int32 state = 2;// 活动状态. 0未开始，1进行中，2已结束
+	optional bool isShow = 3;// 是否显示
+	optional int32 startTimeSeconds = 4;// 距离活动开始剩余时间（秒）
+	optional int32 endTimeSeconds = 5;// 距离活动结束剩余时间（秒）
+	repeated ActivityReward reward = 6;// 奖励（兼容原有活动）
+}
+
+message GCActivityInfoProto {
+	optional int32 msgType = 1[default = 26000];// 协议号
+	optional int32 status = 2;// 状态
+	optional int32 activityId = 3;// 活动id. 0代表全部活动信息
+	repeated ActivityInfo activityInfo = 4;// 活动信息
+}

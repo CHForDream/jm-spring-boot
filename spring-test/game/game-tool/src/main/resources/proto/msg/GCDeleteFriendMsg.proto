@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message GCDeleteFriendProto {
+  optional int32 msgType = 1[default = 2014];//协议号
+  optional int32 status = 2;//状态码
+}

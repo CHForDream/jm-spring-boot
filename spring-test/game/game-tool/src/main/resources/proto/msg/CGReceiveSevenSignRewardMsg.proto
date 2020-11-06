@@ -1,0 +1,7 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//7日签到
+message CGReceiveSevenSignRewardProto {
+optional int32 msgType = 1[default = 3305];//协议号
+  	optional int32 day = 2;//签到第几天
+}

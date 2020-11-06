@@ -1,0 +1,7 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//7日签到状态获取
+message CGGetSevenSignStatusProto {
+optional int32 msgType = 1[default = 3306];//协议号
+  	
+}

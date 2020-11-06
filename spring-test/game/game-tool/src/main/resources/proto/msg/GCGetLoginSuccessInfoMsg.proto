@@ -1,0 +1,12 @@
+syntax = "proto2";
+package buffer;
+
+//角色登陆成功后触发
+message GCGetLoginSuccessInfoProto {
+  optional int32 msgType = 1[default = 5003];//协议号
+  optional int32 status = 2;
+  optional int32 guide = 3;//最后一次上报引导
+  repeated int32 nextGuideIds = 4;//触发未执行的引导
+  repeated int32 battleGuides = 5;//战斗中触发过的引导
+  repeated int32 FunctionIds = 6;//开启的系统id
+}

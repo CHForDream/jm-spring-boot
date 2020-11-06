@@ -1,0 +1,11 @@
+syntax = "proto2";
+package buffer;
+
+// 关卡购买建筑
+message GCPveCityBuyDecProto {
+  optional int32 msgType	= 1[default = 7014];//协议号
+  optional int32 cityId		= 2; // 所选城市id
+  optional int32 pveId		= 3; // 当前景点id
+  optional int32 decId		= 4; // 建筑id
+  optional int32 status		= 5; // 状态
+}

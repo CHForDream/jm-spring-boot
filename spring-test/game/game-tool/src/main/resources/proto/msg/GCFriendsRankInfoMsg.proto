@@ -1,0 +1,18 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message FriendsRankInfoProto{
+	optional string name=1;//昵称
+	optional string header=2;//头像
+	optional int32 pveTaskId=3;//关卡id
+	optional int32 homeDecNum=4;//家园装饰数量
+	optional int32 roleLevel=5;//角色登记
+	optional int32 gradingNum=6;//排位(停用)
+	optional int64 uid=7;//角色id
+}
+
+message GCFriendsRankInfoProto {
+  optional int32 msgType=1 [default = 24017];//协议类型  
+  optional int32 status=2;//协议状态
+  repeated FriendsRankInfoProto rankInfos=3;//
+}

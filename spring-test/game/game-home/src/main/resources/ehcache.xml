@@ -1,0 +1,43 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
+    <defaultCache eternal="false"
+           maxElementsInMemory="1000"
+           overflowToDisk="false"
+           diskPersistent="false"
+           timeToIdleSeconds="900"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- 同时在线20000人标准配置 -->
+    <cache name="All" eternal="false" overflowToDisk="false" diskPersistent="false"
+           maxElementsInMemory="100000"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+    <cache name="Role" eternal="false" overflowToDisk="false" diskPersistent="false"
+           maxElementsInMemory="60000"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+    <cache name="Hero" eternal="false" overflowToDisk="false" diskPersistent="false"
+           maxElementsInMemory="80000"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+    <cache name="Home" eternal="false" overflowToDisk="false" diskPersistent="false"
+           maxElementsInMemory="20000"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+    <cache name="Item" eternal="false" overflowToDisk="false" diskPersistent="false"
+           maxElementsInMemory="20000"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+    <cache name="AchTask" eternal="false" overflowToDisk="false" diskPersistent="false"
+           maxElementsInMemory="20000"
+           timeToIdleSeconds="1200"
+           timeToLiveSeconds="0"
+           memoryStoreEvictionPolicy="LRU"/>
+</ehcache>

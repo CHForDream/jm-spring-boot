@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+
+//客户端上报引导信息
+message CGUpdateRoleGuideProto {
+  optional int32 msgType = 1[default = 5501];//协议号
+  optional int32 step = 2;//引导进行到了哪一步
+  optional int32 type = 3;//引导类型 1:战斗外引导  2:战斗内棋子引导
+}

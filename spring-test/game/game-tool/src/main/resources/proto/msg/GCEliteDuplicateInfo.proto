@@ -1,0 +1,18 @@
+syntax = "proto2";
+package buffer;
+
+message EliteDuplicateInfoDto {
+	optional int32 eliteId = 1;// 精英副本Id（城市Id）
+	optional int32 state = 2;// 状态。-1未解锁；0未开始挑战；1-3关卡进度（花费挑战次数后初始为1）
+	optional int32 leftChallengeTimes = 3;// 剩余挑战次数
+	optional int32 leftChallengeBuyTimes = 4;// 挑战门票剩余购买次数（每日重置，清零）
+	optional int32 leftSteps = 5;// 剩余挑战步数
+	optional int32 leftStepsBuyTimes = 6;// 剩余步数购买次数
+}
+
+// 所有精英副本信息
+message GCEliteDuplicateInfoProto {
+	optional int32 msgType = 1[default = 25201];// 协议号
+	optional int32 status = 2;// 结果状态。10000成功；
+	repeated EliteDuplicateInfoDto eliteDuplicateInfo = 3;// 精英副本信息
+}

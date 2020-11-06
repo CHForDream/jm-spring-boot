@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message GCServerBackProto {
+  optional int32 msgType=1 [default = 1500];//协议类型
+  optional int32 backType= 2;//消息号
+  optional int32 param1= 3;//参数1
+  optional string param2= 4;//参数2
+}

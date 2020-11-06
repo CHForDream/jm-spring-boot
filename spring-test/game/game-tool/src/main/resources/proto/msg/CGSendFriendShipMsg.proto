@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//赠送好友点
+message CGSendFriendShipProto {
+  optional int32 msgType=1 [default = 2021];//送亲密度
+  optional int64 targetUid=2;//对方的UID
+  optional int32 param=3;//备用
+}

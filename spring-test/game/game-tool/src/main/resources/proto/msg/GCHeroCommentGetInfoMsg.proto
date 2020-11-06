@@ -1,0 +1,19 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message CommentInfoProto{
+	optional int64 uid=1;//评论玩家的id
+	optional int64 createTime = 2;//创建时间
+	optional int32 fabulousNum = 3;//点赞数量
+	optional string comment = 4;//评论
+	optional string header = 5;//玩家头像
+	optional string name = 6;//玩家昵称
+	optional bool fabulousStatus = 7;//点赞状态
+}
+
+message GCHeroCommentGetInfoProto {
+  optional int32 msgType=1 [default = 24015];//协议类型  
+  optional int32 status = 2;//协议状态
+  optional int32 type=3;//查看类型 1:时间榜单  2:热度榜单
+  repeated CommentInfoProto commentInfos=4;//评论详情 
+}

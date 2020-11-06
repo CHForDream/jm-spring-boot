@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+//充值挡位信息
+message CGGetPayInfoProto {
+  optional int32 msgType = 1[default = 4402];//协议号
+  optional int32 platform = 2;//平台渠道id,根据这个id找到对应的充值挡位
+}

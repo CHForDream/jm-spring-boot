@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message CGGetAchieveRewardProto {
+  optional int32 msgType = 1[default = 2221];//协议号
+  optional int32 rewardType = 2;//奖励类型1任务2活跃
+  optional int32 activeId = 3;//活跃度奖励ID
+  optional int32 taskId = 4;//任务ID
+}

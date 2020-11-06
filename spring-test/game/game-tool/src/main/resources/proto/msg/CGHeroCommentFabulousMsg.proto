@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message CGHeroCommentFabulousProto {
+  optional int32 msgType=1 [default = 24014];//协议类型  
+  optional int32 heroCode=2;//英雄标识
+  optional int64 commentUid=3;//评论玩家的uid
+  optional int32 type=4;//点赞类型  1:英雄  2:宠物
+}

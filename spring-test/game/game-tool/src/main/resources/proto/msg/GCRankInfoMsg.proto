@@ -1,0 +1,25 @@
+syntax = "proto2";
+package buffer;
+
+message PlayerInfoProto {
+	optional int64 uid = 1;//玩家uid
+	optional string name = 2;//玩家名字
+	optional string header = 3;//玩家头像
+	optional int32 level = 4;//玩家等级
+}
+
+message RankInfoProto {
+	optional int32 rank = 1;//排行. -1代表未上榜
+	optional int64 score = 2;//分数
+	repeated PlayerInfoProto playerInfoList = 3;//玩家信息
+}
+
+message GCRankInfoProto {
+  optional int32 msgType=1 [default = 23001];
+  optional int32 status= 2;//10000成功; 10037排行类型(rankType)错误
+  optional int32 rankType= 3;//排行榜类型. [1-6, 分别对应天梯第一关到第六关]
+  optional string rankSubType= 4;//排行榜子类型.[天梯中, 对应的是城市编号]
+  optional int64 time= 5;//排行榜时间戳. 若时间戳与上次返回的相同, 则排行数据未变化, 本次的rankInfoList数据是空的
+  repeated RankInfoProto rankInfoList = 6;//排行信息列表. 默认按照排行顺序(第一条数据是第一名)
+  optional RankInfoProto myRankInfo= 7;//我的最好排行数据.
+}

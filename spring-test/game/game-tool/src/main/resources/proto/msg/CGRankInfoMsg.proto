@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+message CGRankInfoProto {
+  optional int32 msgType=1 [default = 23001];
+  optional int32 rankType= 2;//排行榜类型. [1-6, 分别对应天梯第一关到第六关]
+  optional string rankSubType= 3;//排行榜子类型.[天梯中, 对应的是城市编号]
+  optional int64 time= 4;//上次获取排行信息返回时间戳. 第一次请求默认为0
+}

@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer; 
+message CGFriendsListProto {
+   optional int32 msgType=1 [default = 2010];//协议类型
+  optional int32 type=2;//0全部好友，1附近，2最近游戏好友
+  optional int32 resource=3;//请求来源   0:好友列表 1:PVP 2:天梯
+}

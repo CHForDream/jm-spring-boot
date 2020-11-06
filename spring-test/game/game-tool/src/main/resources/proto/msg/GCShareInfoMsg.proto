@@ -1,0 +1,14 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+message SharedInfo {
+  optional int32 shareType = 1;//分享类型: 1每日分享, 2战斗结算翻倍, 3PVE加步数, 4战前随机道具
+  optional int32 sharedTimes = 2;//已分享的次数
+  optional int32 limitTimes = 3;//每日的次数上限
+}
+
+message GCShareInfoProto {
+  optional int32 msgType = 1[default = 8001];//协议号
+  optional int32 status = 2;//状态码
+  repeated SharedInfo infoList= 3;//分享信息列表
+}

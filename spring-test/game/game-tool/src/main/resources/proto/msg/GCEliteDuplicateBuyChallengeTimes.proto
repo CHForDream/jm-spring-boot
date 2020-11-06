@@ -1,0 +1,11 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+// 购买挑战次数
+message GCEliteDuplicateBuyChallengeTimesProto {
+	optional int32 msgType = 1[default = 25202];//协议号
+	optional int32 status = 2;// 结果状态。10000成功；9999钻石不足；10001角色不存在；10002参数错误；10200没有挑战购买次数
+	optional int32 eliteId = 3;// 精英副本Id（城市Id）
+	optional int32 leftChallengeTimes = 4;// 剩余挑战次数
+	optional int32 leftBuyTimes = 5;// 剩余购买次数
+}

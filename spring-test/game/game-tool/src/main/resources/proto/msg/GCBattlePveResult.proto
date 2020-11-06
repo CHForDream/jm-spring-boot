@@ -1,0 +1,34 @@
+syntax = "proto2";
+package buffer;
+
+//PVE(单机结算)
+
+message ScoreInfo {
+	optional int32 scoreType	= 1; // 分数类型
+	optional int32 score		= 2; // 该类型的分数
+}
+
+message ItemProto {
+	optional int32 itemType = 1;// 道具类型
+	optional int32 itemId = 2;// 道具Id
+	optional int32 itemNum = 3;// 道具数量
+}
+
+message GCBattlePveResultProto {
+	optional int32		msgType				= 1[default = 25001]; // 协议号
+	optional int32		status				= 2; // 状态码. 10000成功; 10062关卡错误
+	optional int32		result				= 3; // 战斗结果. 0失败; 1胜利
+	optional int32		targetId			= 4; // 当前完成的关卡Id
+	optional int32		nextTargetId		= 5; // 下一个关卡Id, 没有关卡为-1
+	repeated ItemProto	resultRewardItem	= 6; // 战斗结算奖励
+	repeated ItemProto	stepRrewardItem		= 7; // 剩余步数奖励(原 步数奖励)
+	repeated ItemProto	targetRrewardItem	= 8; // 关卡额外奖励(原 难度奖励)
+	repeated ItemProto	conWinRewardItem	= 9; // 连胜奖励
+	repeated ItemProto	dupRewardItem		= 10; // 副本结算奖励
+	optional int32		pveConWinNum		= 12; // 连胜次数(结算后的)
+	optional int32 		battleType			= 13; // 关卡类型  0 pve 1 副本
+	optional int32 		dupStar				= 14; // 副本的评级
+	optional int32		dupScore			= 15; // 副本的总分数
+	repeated ScoreInfo	scoreInfo			= 16; // 副本的分数信息
+	optional int32		roleDupStar			= 17; // 玩家的副本星星数量
+}

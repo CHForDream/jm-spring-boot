@@ -1,0 +1,15 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message GCChatProto {
+  optional int32 msgType=1 [default = 2004];//协议类型
+  optional int32 status= 2;//状态码
+  optional int32 chatType= 3;//聊天类型 1群聊 2私聊
+  optional int64 fromUid= 4;//发送者
+  optional string name= 5;//名字
+  optional string aren= 6;//地区
+  optional int32 sex= 7;//性别
+  optional string head= 8;//头像
+  optional int32 lv= 9;//等级
+  optional string cont= 10;//内容
+  optional bytes voice= 11;//语音
+ }

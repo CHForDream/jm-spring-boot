@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+
+// 精英副本购买步数
+message CGEliteDuplicateBuyStepsProto {
+	optional int32 msgType = 1[default = 25207];//协议号
+	optional int32 eliteId = 2;// 精英副本Id（城市Id）
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+message CGMailDeleteProto {
+  optional int32 msgType=1 [default = 2203];//协议类型
+  optional int32 delType=2;//1单个2全部
+  optional int32 mailType=3;//邮件类型1好友2系统
+  optional int64 params=4;//邮件ID
+}

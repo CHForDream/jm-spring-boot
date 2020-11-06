@@ -1,0 +1,8 @@
+syntax = "proto2";
+package buffer;
+
+//领取首充奖励
+message CGReCeiveFirstPayRewardProto {
+  optional int32 msgType = 1[default = 4405];//协议号
+   optional int32 code = 2;//领取的id
+}

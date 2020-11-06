@@ -1,0 +1,9 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//禁言数据结构
+message GCBanchChatProto {
+  optional int32 msgType = 1[default = 3302];//协议号
+  optional int32 status = 2[default = 3302];//协议号
+  optional int64 startTime = 3;//开始禁言时间
+  optional int64 endTime = 4;//结束禁言时间
+}

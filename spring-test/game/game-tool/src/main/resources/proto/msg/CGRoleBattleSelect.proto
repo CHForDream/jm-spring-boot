@@ -1,0 +1,9 @@
+syntax = "proto2";
+package buffer;
+message CGRoleBattleSelectProto {
+	optional int32 msgType = 1 [default = 24101];
+	optional int32 heroId = 2;// 已选择的英雄Id
+	repeated int32 itemId = 4;// 已选择的战前道具Id(可多选)
+	optional int32 battleType = 5; // 战斗类型 0PVE 1副本 2精英副本
+	optional int32 recommendHero = 6; // 选择推荐英雄 直接赋值英雄id，该值赋值后不应该有heroid的赋值
+}

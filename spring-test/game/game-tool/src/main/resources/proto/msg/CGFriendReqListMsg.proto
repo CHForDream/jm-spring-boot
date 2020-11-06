@@ -1,0 +1,6 @@
+syntax = "proto2";//指定版本信息，不指定会报错
+package buffer; //package声明符
+//获取好友请求列表
+message CGFriendReqListProto {
+  optional int32 msgType=1 [default = 2013];//协议类型
+}

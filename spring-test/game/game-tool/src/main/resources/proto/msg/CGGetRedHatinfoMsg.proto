@@ -1,0 +1,7 @@
+syntax = "proto2";
+package buffer;
+
+//获取小红帽
+message CGGetRedHatinfoProto {
+  optional int32 msgType = 1[default = 5504];//协议号
+}
